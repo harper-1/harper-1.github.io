@@ -30,20 +30,18 @@ function addFullScreen(img) {
 
         $('header').addClass('black');
         div.onclick = overlay.onclick = function (e) {
-            if (e.target.tagName !== "IMG") {
-                wrapper.remove();
-                $('header').removeClass('black');
-            }
+            wrapper.remove();
+            $('header').removeClass('black');
         };
     }
 }
 
 function findNumberOfColumns() {
     var width = document.body.clientWidth;
-    return width > 800 ? 3 : width > 550 ? 2 : 1;
+    return width > 980 ? 3 : width > 550 ? 2 : 1;
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
     var container = $('.images-list')[0];
     var nColumns = findNumberOfColumns();
     var columns = [];

@@ -130,6 +130,9 @@ header.black {
     justify-content: center;
 }
 .full-screen img {
+    max-height: 100%;
+    max-width: 100%;
+    overflow: hidden;
     object-fit: contain;
 }
 .overlay {
@@ -144,7 +147,7 @@ header.black {
 /* FullScreen End */
 
 /* Media */
-@media screen and (max-device-width: 800px){
+@media screen and (max-device-width: 980px){
     .images-column-2 {
         margin-right: 0;
     }
