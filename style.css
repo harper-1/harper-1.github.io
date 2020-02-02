@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    top: 0;
+    padding: 33px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    color: #333333;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    position: fixed;
+    background: white;
+    z-index: 1;
+    transition: all .3s ease;
+}
+
+header.black {
+    color: white;
+    background: black;
+}
+
+/* Main Info Start */
+.main-info {
+    display: flex;
+    margin: 90px 10% 10px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.profile-photo img {
+    height: 240px;
+}
+
+.profile-info {
+    margin-left: 30px;
+}
+
+.profile-info .text {
+    line-height: 29px;
+    text-align: justify;
+}
+
+.profile-info .contacts {
+    margin-top: 20px;
+}
+
+.box {
+    align-items: center;
+    display: flex;
+    width: 185px;
+    text-decoration: none;
+    color: black;
+}
+
+.box svg, .full-screen .close {
+    width: 16px;
+    height: 16px;
+    fill: #333333;
+    margin: 5px 5px 5px 0;
+}
+
+.box svg.inst {
+    height: 19px;
+}
+
+.numbers {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    opacity: 0.9;
+}
+/* Main Info End */
+
+
+/* Images List Start */
+.images-list {
+    display: flex;
+    margin: 0 10% 30px;
+}
+
+.image-item img {
+    width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+.images-column-2 {
+    margin: 0 20px;
+}
+
+/* TODO: To make grid styled as chess-type - uncomment this styles
+.images-column .image-item:nth-child(odd) img {
+    height: 300px;
+}
+.images-column .image-item:nth-child(even) img {
+    height: 150px;
+}
+
+.images-column-2 .image-item:nth-child(odd) img {
+    height: 150px;
+}
+.images-column-2 .image-item:nth-child(even) img {
+    height: 300px;
+}
+*/
+
+.image-item {
+    margin: 20px 0;
+}
+/* Images List End */
+
+/* FullScreen Start */
+.full-screen {
+    position: fixed;
+    top: 90px;
+    width: 80%;
+    height: 80%;
+    margin: 0 10%;
+}
+.full-screen div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.full-screen img {
+    object-fit: contain;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    background: #000000b8;
+    z-index: -1;
+}
+/* FullScreen End */
+
+/* Media */
+@media screen and (max-device-width: 800px){
+    .images-column-2 {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-device-width: 550px) {
+    .main-info {
+        flex-direction: column;
+    }
+
+    .profile-photo img {
+        width: 100%;
+        height: auto;
+    }
+
+    .profile-info {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
